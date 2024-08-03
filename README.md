@@ -31,15 +31,17 @@ I then wanted to find out if there was any benefit to prioritizing certain soalr
 Lastly, I used used the linear equation that defines the relationshipt between to make projections for future results.
 
 Based on my analysis, the following steps are likely most efficient for NYC to reach its goal of installing 100 MW solar PV capacity:
-First do solar ready
-Add under construction and misidentified to solar ready
-Don’t necessarily assume there are economies of scale in terms of MW capacity for bigger gsf projects. Do higher MW capacity first, cost is lightly correlated (factor) so you get what you pay for.
-Made list sorting by this
-But do other funding sources first
-Will need to do all of them anyway
-For not solar ready, the main reason is roof is both too old and not in good condition. Replace these roofs first (as it would have other benefits as well) starting with highest gsf (assumption of some economies of scale)
-Made list sorted by this
-Projections of energy savings and MT CO2 reduction at 100MW
+<ul>
+<li>First do solar ready</li>
+<li>Add under construction and misidentified to solar ready</li>
+<li>Don’t necessarily assume there are economies of scale in terms of MW capacity for bigger gsf projects. Do higher MW capacity first, cost is lightly correlated (factor) so you get what you pay for.</li>
+<li>Made list sorting by this</li>
+<li>But do other funding sources first</li>
+<li>Will need to do all of them anyway</li>
+<li>For not solar ready, the main reason is roof is both too old and not in good condition. Replace these roofs first (as it would have other benefits as well) starting with highest gsf (assumption of some economies of scale)</li>
+<li>Made list sorted by this</li>
+<li>Projections of energy savings and MT CO2 reduction at 100MW</li>
+</ul>
 
 
 
