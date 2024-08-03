@@ -2,6 +2,9 @@ New York City aims to install 100MW of solar PV capacity. The NYC Department of 
 
 After downloading teh CSV file from the NYC DCAS website, I cleaned the data in Excel by filtering for 2022 data, creating a unique site identifier variable (site_address), identifying and deleting duplicates of this variable, trimming spaces, converting number data stored as string data to number data types, checking for typos, and identifying and making a plan to deal with missing data (see cleaning_changelog).
 
+Add issues iwth data
+Add how I approached duplicates adn missing
+
 After the data was in good shape to use, examined it in Excel. I added a column converting KW to MW (KW/1000), to facilitate easier comparison to the goal solar PV capacity, which is listed in MW. I created pivot tables and several scatter plots to get a sense of the data and the relationship / correlation between several variables (see city of new york excel). 
 
 In these pivot tables, I calculate and show the results that will come from all completed and in progress solar PV installations, including the total installed MW capacity, total project cost, the total annual energy savings, annual CO2 emissions reduction, and more. I calculate the average cost to install 1MW of solar capacity at $3,329,242.91.
@@ -11,6 +14,19 @@ Put scatter plot findings in excel
 Come back and write about progress toward goal.
 
 Then, I uploaded my data into SQL (BigQuery). I recieved a "bad character" error when uploading, and discovered that the data had various null characters that appeared in SQL (despite my file being UTF-8 encoded). I used the Excel VBM editor to clean the data (see VBM file), and successfully uplaoded to SQL. A few errors persisted in the data type casting, but after examining the data, there was nothing else major wrong with the data. I cleaned the data by correctly casting data types for analysis and correcting several minor errors (SQL cleanign queries).
+
+Then, I began analysis in SQL. I pulled summary statistics for several variables (see sql queries) and calculated the correlation coefficients for serveral sets of variables (write a few here but see sql).
+
+I wanted to know how to best approach the non-solar ready sites to fill the 9(blank) gap that would still exist after installing solar PV at all solar ready sites. I made a column showing the reason each site was not solar ready, which I planned to later use in a visual as well as for analysis. While writing code to classify sites based on the reason they were nto solar ready, I discovered that several sites had values in their solar reasiness variables indicating that they actually were solar ready, or under construction. I included this in my code to identify these sites. (See sql file) I found that the MW capacity of these sites misidentified as not solar ready = (blank) percent, bringing the gap to ___.
+
+Based on this column, I pulled a list of all sites that would be eligible for a roof replacement, and would then be solar ready. I sorted this list by GSF, with the largest roofs as highest priority, assuming some economies of scale in roof replacement (see replacement eligible list).
+
+I discovered that the vast ma
+
+I then wanted to find out if there was any benefit to prioritizing certain soalr ready sites for solar PV installation. Due to cost data not being collected for solar ready sites, I could not identify the highest MW capacity sites with the lowest relative cost. Cost was correlated with MW capacity, but not GSF, so I could not use GSF to estimate/proxy the cost of each solar installation. However, since cost is related to MW capacity, a higher cost woul dmean greater value in terms of MW capacity, so prioritixing sites in this way is not necessary. I pulled a list of solar ready sites, sorted highest to lowest by MW capacity, for prioritizing solar installatins, however, it make sense to install solar pv on all solar ready roofs.  
+
+
+
 
 
 
