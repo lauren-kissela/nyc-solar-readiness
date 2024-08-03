@@ -17,13 +17,30 @@ Then, I uploaded my data into SQL (BigQuery). I recieved a "bad character" error
 
 Then, I began analysis in SQL. I pulled summary statistics for several variables (see sql queries) and calculated the correlation coefficients for serveral sets of variables (write a few here but see sql).
 
-I wanted to know how to best approach the non-solar ready sites to fill the 9(blank) gap that would still exist after installing solar PV at all solar ready sites. I made a column showing the reason each site was not solar ready, which I planned to later use in a visual as well as for analysis. While writing code to classify sites based on the reason they were nto solar ready, I discovered that several sites had values in their solar reasiness variables indicating that they actually were solar ready, or under construction. I included this in my code to identify these sites. (See sql file) I found that the MW capacity of these sites misidentified as not solar ready = (blank) percent, bringing the gap to ___.
+I wanted to know how to best approach the non-solar ready sites to fill the 9(blank) gap that would still exist after installing solar PV at all solar ready sites. I made a column showing the reason each site was not solar ready, which I planned to later use in a visual as well as for analysis. While writing code to classify sites based on the reason they were nto solar ready, I discovered that several sites had values in their solar reasiness variables indicating that they actually were solar ready, or under construction. I included this in my code to identify these sites. (See sql file) I found that the MW capacity of these sites misidentified as not solar ready = 7.616 MW, bringing the gap to ___.
+
+I used the average MW capacity per site multiplied by the count of roof replacement eligible sites to get a very rough estimate of the total MW capacity potential of the roof replacement eligible sites: 216.179 MW.
+
+I discovered that the vast majority of non solar-ready sites had roofs that were too old and not in good condition. 
 
 Based on this column, I pulled a list of all sites that would be eligible for a roof replacement, and would then be solar ready. I sorted this list by GSF, with the largest roofs as highest priority, assuming some economies of scale in roof replacement (see replacement eligible list).
 
-I discovered that the vast ma
 
 I then wanted to find out if there was any benefit to prioritizing certain soalr ready sites for solar PV installation. Due to cost data not being collected for solar ready sites, I could not identify the highest MW capacity sites with the lowest relative cost. Cost was correlated with MW capacity, but not GSF, so I could not use GSF to estimate/proxy the cost of each solar installation. However, since cost is related to MW capacity, a higher cost woul dmean greater value in terms of MW capacity, so prioritixing sites in this way is not necessary. I pulled a list of solar ready sites, sorted highest to lowest by MW capacity, for prioritizing solar installatins, however, it make sense to install solar pv on all solar ready roofs.  
+
+Lastly, I used used the linear equation that defines the relationshipt between to make projections for future results.
+
+Based on my analysis, the following steps are likely most efficient for NYC to reach its goal of installing 100 MW solar PV capacity:
+First do solar ready
+Add under construction and misidentified to solar ready
+Don’t necessarily assume there are economies of scale in terms of MW capacity for bigger gsf projects. Do higher MW capacity first, cost is lightly correlated (factor) so you get what you pay for.
+Made list sorting by this
+But do other funding sources first
+Will need to do all of them anyway
+For not solar ready, the main reason is roof is both too old and not in good condition. Replace these roofs first (as it would have other benefits as well) starting with highest gsf (assumption of some economies of scale)
+Made list sorted by this
+Projections of energy savings and MT CO2 reduction at 100MW
+
 
 
 
