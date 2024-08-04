@@ -1,3 +1,4 @@
+--calculate correlation coefficients for the following relationships: project cost and savings on energy, MW capacity and project cost, MW capacity and project cost removing outliers where cost was 0, MW capacity and GSF, MW capacity and emissions reduction, MW capacity and savings on enery
 SELECT
   CORR(IF(Status = 'Completed', `Upfront Project Cost ___`, NULL), 
        IF(Status = 'Completed', `Estimated Annual Energy Savings ___`, NULL)) AS cost_savings_correlation_coefficient,
