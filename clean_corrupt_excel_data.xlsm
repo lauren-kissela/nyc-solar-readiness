@@ -74,7 +74,7 @@ Sub RemoveBadCharacters()
     MsgBox "All bad characters have been removed."
 End Sub
 
-
+' make sure all quotes are properly escaped
 Sub EscapeQuotesInCSV()
     Dim ws As Worksheet
     Dim cell As Range
