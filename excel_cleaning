@@ -1,0 +1,97 @@
+' Check for and remove null characters in text data 
+Sub RemoveNullCharacters()
+    Dim ws As Worksheet
+    Dim cell As Range
+    Dim cellValue As Variant
+
+    ' Loop through each worksheet
+    For Each ws In ThisWorkbook.Worksheets
+        ' Loop through each cell in the used range
+        For Each cell In ws.UsedRange
+            cellValue = cell.Value
+            ' Check if cell is text and contains null character
+            If VarType(cellValue) = vbString Then
+                If InStr(cellValue, Chr(0)) > 0 Then
+                    cell.Value = Replace(cellValue, Chr(0), "")
+                End If
+            End If
+        Next cell
+    Next ws
+
+    MsgBox "Null characters have been removed."
+End Sub
+
+' Check more broadly for and remove null and bad characters in response to continued corrupt characters
+Sub RemoveBadCharacters()
+    Dim ws As Worksheet
+    Dim cell As Range
+    Dim cellValue As Variant
+
+    ' Loop through each worksheet
+    For Each ws In ThisWorkbook.Worksheets
+        ' Loop through each cell in the used range
+        For Each cell In ws.UsedRange
+            cellValue = cell.Value
+            ' Check if cell is text
+            If VarType(cellValue) = vbString Then
+                ' Remove null characters
+                cellValue = Replace(cellValue, Chr(0), "")
+                ' Replace any other problematic non-printable characters
+                cellValue = Replace(cellValue, Chr(1), "")
+                cellValue = Replace(cellValue, Chr(2), "")
+                cellValue = Replace(cellValue, Chr(3), "")
+                cellValue = Replace(cellValue, Chr(4), "")
+                cellValue = Replace(cellValue, Chr(5), "")
+                cellValue = Replace(cellValue, Chr(6), "")
+                cellValue = Replace(cellValue, Chr(7), "")
+                cellValue = Replace(cellValue, Chr(8), "")
+                cellValue = Replace(cellValue, Chr(9), "")
+                cellValue = Replace(cellValue, Chr(11), "")
+                cellValue = Replace(cellValue, Chr(12), "")
+                cellValue = Replace(cellValue, Chr(14), "")
+                cellValue = Replace(cellValue, Chr(15), "")
+                cellValue = Replace(cellValue, Chr(16), "")
+                cellValue = Replace(cellValue, Chr(17), "")
+                cellValue = Replace(cellValue, Chr(18), "")
+                cellValue = Replace(cellValue, Chr(19), "")
+                cellValue = Replace(cellValue, Chr(20), "")
+                cellValue = Replace(cellValue, Chr(21), "")
+                cellValue = Replace(cellValue, Chr(22), "")
+                cellValue = Replace(cellValue, Chr(23), "")
+                cellValue = Replace(cellValue, Chr(24), "")
+                cellValue = Replace(cellValue, Chr(25), "")
+                cellValue = Replace(cellValue, Chr(26), "")
+                cellValue = Replace(cellValue, Chr(27), "")
+                cellValue = Replace(cellValue, Chr(28), "")
+                cellValue = Replace(cellValue, Chr(29), "")
+                cellValue = Replace(cellValue, Chr(30), "")
+                cellValue = Replace(cellValue, Chr(31), "")
+                cell.Value = cellValue
+            End If
+        Next cell
+    Next ws
+
+    MsgBox "All bad characters have been removed."
+End Sub
+
+
+Sub EscapeQuotesInCSV()
+    Dim ws As Worksheet
+    Dim cell As Range
+    Dim cellValue As String
+
+    ' Loop through each worksheet
+    For Each ws In ThisWorkbook.Worksheets
+        ' Loop through each cell in the used range
+        For Each cell In ws.UsedRange
+            If VarType(cell.Value) = vbString Then
+                cellValue = cell.Value
+                ' Escape quotes by doubling them
+                cellValue = Replace(cellValue, """", """""")
+                cell.Value = cellValue
+            End If
+        Next cell
+    Next ws
+
+    MsgBox "Quotes have been properly escaped."
+End Sub
