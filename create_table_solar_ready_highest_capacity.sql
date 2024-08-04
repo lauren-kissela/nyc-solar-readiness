@@ -1,3 +1,4 @@
+--create a list of all solar ready sites, in order from highest to lowest estimated MW capacity
 CREATE TABLE `nyc-trees-417421.solar_readiness_nyc.solar_ready_highest_capacity` AS
 SELECT *
 FROM `nyc-trees-417421.solar_readiness_nyc.solar_readiness_cleaned`
