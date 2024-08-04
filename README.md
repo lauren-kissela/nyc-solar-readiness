@@ -20,16 +20,16 @@ I discovered that the vast majority of non-solar ready sites had roofs that were
 
 I used the average MW capacity per site multiplied by the count of roof replacement eligible sites to get a very rough estimate of the total MW capacity potential of the roof replacement eligible sites (MW capacity data was not collected for non-solar ready sites). I found that there would be potential to install roughly 216.179 MW of solar PV if all sites eligible for a roof replacement got one.
 
-     START HERE EDITING I then wanted to find out if there was any benefit to prioritizing certain soalr ready sites for solar PV installation. Due to cost data not being collected for solar ready sites, I could not identify the highest MW capacity sites with the lowest relative cost. Cost was correlated with MW capacity, but not GSF, so I could not use GSF to estimate/proxy the cost of each solar installation. However, since cost is related to MW capacity, a higher cost woul dmean greater value in terms of MW capacity, so prioritixing sites in this way is not necessary. I pulled a list of solar ready sites, sorted highest to lowest by MW capacity, for prioritizing solar installatins, however, it make sense to install solar pv on all solar ready roofs.  
+Then, I wanted to find out if there was any benefit to prioritizing certain solar-ready sites for solar PV installation. Due to cost data not being collected for solar-ready sites, I could not identify the highest MW capacity sites with the lowest relative cost. Cost was correlated with MW capacity, but not GSF, so I could not use GSF to estimate/proxy the cost of each solar installation. However, since cost is correlated with MW capacity, a higher cost would mean greater value, so there would not be a downside to starting with larger (higher MW capacity) projects. I pulled a list of solar-ready sites, sorted highest to lowest by MW capacity, to prioritize sites (see create_table_solar_ready_highest_capacity.sql and solar_ready_highest_capacity.xlsx). However, it make sense to install solar PV on all solar-ready roofs.  
 
-Lastly, I used used the linear equation that defines the relationshipt between to make projections for future results.
+Lastly, I used used the linear equations that define the relationship between MW capcity and CO2 emissions reduction and between MW capacity and energy cost savings to make projections for future results. I found that after installing 100MW of solar PV, New York City would save approximately $16,566,856.46 annually on energy costs, and they would reduce CO2 emissions by 31,797.9 metric tons (see emissions_reductions_energy_savings_projections.xlsx).
 
-View my tableau dashboard for a visual view of the data: https://public.tableau.com/views/NYCSolarReadiness/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+Visit my [Tableau dashboard]([url](https://public.tableau.com/views/NYCSolarReadiness/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)) for a visual view of the data.
 
-Based on my analysis, the following steps are likely most efficient for NYC to reach its goal of installing 100 MW solar PV capacity:
+Based on my analysis, the following steps are likely most efficient for NYC to reach its goal of installing 100 MW solar PV:
 <ul>
-<li>First do solar ready</li>
-<li>Add under construction and misidentified to solar ready</li>
+<li>Install solar PV at all solar ready sites.If it is necessary to quickly make a goal, it makes sense to install solar at sites with higher estimated MW sites first, and not necessarily sites with higher GSF.</li>
+<li>Add the sites I have identified as "under construction" and "actually solar ready" to the list of solar ready sites.</li>
 <li>Don’t necessarily assume there are economies of scale in terms of MW capacity for bigger gsf projects. Do higher MW capacity first, cost is lightly correlated (factor) so you get what you pay for.</li>
 <li>Made list sorting by this</li>
 <li>But do other funding sources first</li>
