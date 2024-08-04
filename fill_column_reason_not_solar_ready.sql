@@ -1,3 +1,4 @@
+--fill in the column reason_not_solar_ready based on GSF, roof age, and roof condition
 UPDATE `nyc-trees-417421.solar_readiness_nyc.solar_readiness_cleaned` 
 SET reason_not_solar_ready = 
   CASE
