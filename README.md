@@ -24,19 +24,14 @@ Then, I wanted to find out if there was any benefit to prioritizing certain sola
 
 Lastly, I used used the linear equations that define the relationship between MW capcity and CO2 emissions reduction and between MW capacity and energy cost savings to make projections for future results. I found that after installing 100MW of solar PV, New York City would save approximately $16,566,856.46 annually on energy costs, and they would reduce CO2 emissions by 31,797.9 metric tons (see emissions_reductions_energy_savings_projections.xlsx).
 
-Visit my [Tableau dashboard]([url](https://public.tableau.com/views/NYCSolarReadiness/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)) for a visual view of the data.
+Visit my [Tableau dashboard](https://public.tableau.com/views/NYCSolarReadiness/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) for a visual view of the data.
 
 Based on my analysis, the following steps are likely most efficient for NYC to reach its goal of installing 100 MW solar PV:
 <ul>
-<li>Install solar PV at all solar ready sites.If it is necessary to quickly make a goal, it makes sense to install solar at sites with higher estimated MW sites first, and not necessarily sites with higher GSF.</li>
+<li>Install solar PV at all solar ready sites.If it is necessary to quickly make a goal, it makes sense to install solar at sites with higher estimated MW sites first, and not necessarily sites with higher GSF. List of solar ready sites sorted by estimated MW provided: solar_ready_highest_capacity.xlsx.</li>
 <li>Add the sites I have identified as "under construction" and "actually solar ready" to the list of solar ready sites.</li>
-<li>Don’t necessarily assume there are economies of scale in terms of MW capacity for bigger gsf projects. Do higher MW capacity first, cost is lightly correlated (factor) so you get what you pay for.</li>
-<li>Made list sorting by this</li>
-<li>But do other funding sources first</li>
-<li>Will need to do all of them anyway</li>
-<li>For not solar ready, the main reason is roof is both too old and not in good condition. Replace these roofs first (as it would have other benefits as well) starting with highest gsf (assumption of some economies of scale)</li>
-<li>Made list sorted by this</li>
-<li>Projections of energy savings and MT CO2 reduction at 100MW</li>
+<li>The main reason that sites are not solar ready is that the roof is both too old and not in good condition. Replace these roofs first (as they would be most likely to need replacement anyway) starting with highest square footage (assumption of some economies of scale in roof replacement). List of roof replacement eligible sites sorted by GSF provided: eligible_for_roof_replacement.xlsx.</li>
+<li>The main benefits that will come from reaching the goal of 100MW solar PV installed on NYC government buildings include: New York City would save approximately $16,566,856.46 annually on energy costs, and they would reduce CO2 emissions by 31,797.9 metric tons (see emissions_reductions_energy_savings_projections.xlsx).</li>
 </ul>
 
 
